@@ -1,0 +1,38 @@
+
+@media (min-width: 1200px) {
+  .pagination {
+    text-align: center; /* Alinea los elementos de paginación a la derecha */
+    margin-left: 30px; /* Agrega un margen en el lado derecho para separar del menú de navegación */
+  }
+}
+
+/* Estilos para dispositivos móviles y tabletas */
+@media (max-width: 1199px) {
+  .pagination {
+    text-align: center; /* Centra los elementos de paginación horizontalmente */
+    margin-top: 20px; /* Agrega un espacio en la parte superior */
+  }
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #0082e6;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #1b9bff;
+}
+
+.pagination a:first-child {
+  margin-left: 0;
+}
+
+.pagination a:last-child {
+  margin-right: 0;
+}

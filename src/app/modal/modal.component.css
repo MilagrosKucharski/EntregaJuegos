@@ -1,0 +1,66 @@
+/* Estilos para el modal */
+.modal {
+  position: fixed;
+  top: 50%; /* Coloca la parte superior del modal en el centro vertical */
+  left: 50%; /* Coloca la parte izquierda del modal en el centro horizontal */
+  transform: translate(-50%, -50%); /* Centra el modal */
+  width: 80%; /* Ancho del modal (ajusta según tus necesidades) */
+  max-height: 80%; /* Altura máxima del modal (ajusta según tus necesidades) */
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: auto; /* Agrega una barra de desplazamiento si es necesario */
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 80%; /* Reducir el ancho máximo en la versión de escritorio */
+  margin: 0 auto; /* Centrar el contenido horizontalmente */
+}
+
+/* Estilos para el título del juego */
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la imagen del juego */
+.modal-image {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la descripción del juego */
+.modal-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las revisiones del juego */
+.modal-reviews {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el botón Cerrar */
+.modal-close-button {
+  background-color: #0082e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para el botón Cerrar al pasar el mouse */
+.modal-close-button:hover {
+  background-color: #1b9bff;
+}

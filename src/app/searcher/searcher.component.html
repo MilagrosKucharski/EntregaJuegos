@@ -1,0 +1,4 @@
+<div class="search-bar">
+  <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="onSearchTermChange()" placeholder="Nombre de su juego">
+  <button (click)="onSearchTermChange()">Buscar</button>
+</div>

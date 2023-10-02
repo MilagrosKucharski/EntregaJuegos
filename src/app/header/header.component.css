@@ -1,0 +1,12 @@
+/* Estilos para el encabezado */
+header {
+  background-color: #0082e6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}

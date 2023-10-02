@@ -1,0 +1,22 @@
+<app-header [appName]="appName"></app-header>
+<app-menu></app-menu>
+
+<app-searcher (searchTermChange)="filterJuegos($event)"></app-searcher>
+
+
+<div class="juegos-container">
+  <div *ngFor="let juego of juegos" class="juego">
+    <div class="juego-content">
+      <h2 (click)="openPopup(juego)">{{ juego.name }}</h2>
+      <img (click)="openPopup(juego)" [src]="juego.background_image" alt="{{ juego.name }}" class="juego-image">
+    </div>
+    <!-- Otros elementos para mostrar los datos -->
+  </div>
+
+  <div *ngIf="selectedJuego" class="modal">
+    <app-modal [juego]="selectedJuego" (close)="closePopup()"></app-modal>
+  </div>
+
+</div>
+
+<app-footer [currentPage]="currentPage" (pageChange)="onPageChange($event)"></app-footer>

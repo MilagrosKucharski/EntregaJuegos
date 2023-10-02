@@ -1,0 +1,54 @@
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 1200px) {
+  .juegos-container {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantalla grande */
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los juegos se envuelvan en filas */
+    justify-content: space-between;
+    margin-left: 300px;
+  }
+
+  .juego {
+    width: calc(20% - 10px); /* Establece el ancho máximo para cada juego (20% del ancho total menos margen derecho) */
+    margin-right: 10px; /* Añade un margen derecho entre los juegos */
+    margin-bottom: 20px; /* Añade un margen inferior entre las filas de juegos */
+    transition: all 0.3s; /* Agrega una transición para suavizar los cambios de tamaño */
+  }
+
+  .juego-content {
+    text-align: center; /* Centra el contenido del juego */
+  }
+
+  .juego-title {
+    font-size: 16px; /* Establece el tamaño de fuente para los títulos */
+  }
+
+  .juego-image {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 1199px) {
+  .juegos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los juegos horizontalmente */
+  }
+
+  .juego {
+    width: calc(50% - 10px); /* Establece el ancho para dos juegos por fila */
+    margin: 10px;
+  }
+
+  .juego-content {
+    text-align: center;
+  }
+
+  .juego-image {
+    max-width: 100%;
+    height: auto;
+  }
+}

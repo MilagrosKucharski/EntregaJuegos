@@ -1,0 +1,14 @@
+<div *ngIf="isMobile" class="mobile-menu-icon" (click)="toggleMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+<ul class="menu" [ngClass]="{'active': isMenuOpen}">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Mas buscados</a></li>
+  <li><a href="#">Recomendados</a></li>
+  <li><a href="#">Mas vendidos</a></li>
+  <li><a href="#">Top 10</a></li>
+</ul>
+
+
