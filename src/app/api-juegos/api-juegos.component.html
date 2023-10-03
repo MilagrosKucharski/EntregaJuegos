@@ -1,5 +1,6 @@
 <app-header [appName]="appName"></app-header>
-<app-menu></app-menu>
+<app-menu (recommendGamesClick)="selectRandomGames()"></app-menu>
+
 
 <app-searcher (searchTermChange)="filterJuegos($event)"></app-searcher>
 

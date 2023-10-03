@@ -73,6 +73,22 @@ export class ApiJuegosComponent implements OnInit {
       );
     }
   }
+  selectRandomGames() {
+    const randomGames: Juego[] = [];
+    const numGamesToSelect = 10;
+
+    while (randomGames.length < numGamesToSelect) {
+      const randomIndex = Math.floor(Math.random() * this.juegos.length);
+      const selectedGame = this.juegos[randomIndex];
+
+      // Asegurarse de no agregar duplicados
+      if (!randomGames.includes(selectedGame)) {
+        randomGames.push(selectedGame);
+      }
+    }
+
+    this.juegos = randomGames;
+  }
 
 }
 

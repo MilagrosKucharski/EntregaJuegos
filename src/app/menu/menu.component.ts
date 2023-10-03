@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,8 +9,10 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class MenuComponent implements OnInit {
   isMenuOpen = true; // Inicialmente, el menú estará abierto en la versión de escritorio
   isMobile = false;
+  @Output() recommendGamesClick: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor() { }
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.checkIfMobile(); // Verificar si la pantalla es móvil al cargar el componente
@@ -36,6 +39,10 @@ export class MenuComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  selectRandomGames() {
+    this.recommendGamesClick.emit();
   }
 }
 
