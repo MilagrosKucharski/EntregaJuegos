@@ -2,7 +2,7 @@
   <div class="modal-content">
     <h2>{{ juego?.name }}</h2>
     <img [src]="juego?.background_image" alt="{{ juego?.name }}" class="modal-image">
-    <p> <strong>Descripción:</strong> {{ juego?.description }}</p>
+    <p> <strong>Actualizado:</strong> {{ juego?.updated }}</p>
     <p> <strong>Votos:</strong> {{ juego?.reviews_text_count }}</p>
     <button (click)="closeModal()">Cerrar</button>
   </div>

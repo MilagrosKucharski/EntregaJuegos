@@ -19,7 +19,7 @@ interface Juego {
   id: number;
   name: string;
   background_image: string;
-  description: string;
+  updated: string;
   reviews_text_count: string;
 }
 
